@@ -62,6 +62,6 @@ add_action('customize_controls_enqueue_scripts', 'clarusmod_customize_controls_s
 
 // css for customizer
 function clarusmod_customizer_styles() {
-    wp_enqueue_style('clarusmod_customizer_css', clarusmod_customizer_assets('css') . 'customizer.css', array(), '1.0');
+    wp_enqueue_style('clarusmod_customizer_css', clarusmod_customizer_assets('css') . 'customizer.css', array(), '1.0', 'all', 10);
 }
 add_action('customize_controls_print_styles', 'clarusmod_customizer_styles');

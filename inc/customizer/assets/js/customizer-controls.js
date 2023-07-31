@@ -18,7 +18,8 @@ jQuery(document).ready(function ($) {
             tinymce: {
                 wpautop: true,
                 toolbar1: tinyMCEToolbar1String,
-                toolbar2: tinyMCEToolbar2String
+                toolbar2: tinyMCEToolbar2String,
+                content_css: '../wp-content/themes/clarusmod/inc/customizer/assets/css/custom-controls/tinymce.css'
             },
             quicktags: true,
             mediaButtons: tinyMCEMediaButtons
@@ -29,5 +30,24 @@ jQuery(document).ready(function ($) {
             tinyMCE.triggerSave();
             $('#' + editor.id).trigger('change');
         });
+    });
+
+    /**
+     * Url Custom Control
+     *
+     * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
+     * @license http://www.gnu.org/licenses/gpl-2.0.html
+     */
+    // Function to check if the URL is valid
+    function isValidUrl(url) {
+        return url && /^(https?:\/\/)?([\da-z.-]+)\.([a-z.]{2,6})(\/([^\s\/?#]+)?)?(\?([^\s\/?#]*))?(#([^\s\/?#]*))?$/i.test(url);
+    }
+
+    // Listen for changes in the input field and apply the "invalid-url" class
+    $('.customize-control-url input[type="url"]').on('input', function () {
+        var url = $(this).val();
+        var isValid = isValidUrl(url);
+        $('.customize-control-url p.input-msg').toggleClass('invalid-url', !isValid);
+        $(this).toggleClass('invalid-url', !isValid);
     });
 });

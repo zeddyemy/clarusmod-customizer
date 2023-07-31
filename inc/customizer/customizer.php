@@ -19,12 +19,12 @@ class initialize_clarusmod_customizer_settings {
         $wp_customize->register_panel_type('Clarusmod_Customize_Panel');
         $wp_customize->register_section_type('Clarusmod_Customize_Section');
 
-        // #1. Global panel
-        $globalPanel = new Clarusmod_Customize_Panel($wp_customize, 'clarusmod_panel_id', array(
+        // Clarusmod Settings panel
+        $clarusmodPanel = new Clarusmod_Customize_Panel($wp_customize, 'clarusmod_panel_id', array(
             'title' => 'Clarusmod Settings',
             'priority' => 10,
         ));
-        $wp_customize->add_panel($globalPanel);
+        $wp_customize->add_panel($clarusmodPanel);
 
         /* #1.1 child panels, sections, settings, and controls for The Clarusmod Panel above */
         include_once trailingslashit(dirname(__FILE__)) . 'clarusmod-panels/clarusmod-panels.php';
