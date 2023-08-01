@@ -14,8 +14,6 @@
 <footer class="footer col-12">
     <div class="footer-b flex flexCenter">
         <p> <?php echo clarusmod_copyright() ?> </p>
-        <?php echo author_url('https://zeddyemy.github.io', 'Zeddy Emmanuel'); 
-        ?>
     </div>
 </footer>
 

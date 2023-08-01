@@ -1,0 +1,61 @@
+@font-face {
+    font-family: ARSMaquettePro;
+    src: url(../fonts/ARS-MaquettePro/ARSMaquettePro-Bold.woff2),
+        url(../fonts/ARS-MaquettePro/ARSMaquettePro-Bold.woff);
+}
+@font-face {
+    font-family: RobotoSerif;
+    src: url(../fonts/RobotoSerif/RobotoSerif-Regular.ttf);
+}
+@font-face {
+    font-family: Poppins;
+    src: url(../fonts/Poppins/Poppins.ttf);
+}
+
+*{
+	margin: 0;
+	padding: 0;
+	box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    -webkit-tap-highlight-color: transparent;
+}
+
+body {
+    --font-one: sans-serif;
+    --font-two: 'ARSMaquettePro', var(--font-one);
+    --font-three: 'RobotoSerif', var(--font-one);
+    --font-four: 'Poppins', var(--font-one);
+    --link: #2869ff;
+    font-family: var(--font-four);
+}
+
+.wrapper {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    justify-content: center;
+    background-color: #181818;
+    color: antiquewhite;
+    min-height: 100vh;
+    gap: 10px;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    font-family: var(--font-two);
+}
+h1 {
+    font-size: 2.7em;
+}
+a {
+    color: var(--link);
+    font-weight: bold;
+    text-decoration: none;
+}
+p {
+    font-size: 1.04em;
+}
+
+.theme-author-link {
+    font-size: 1.3em;
+}

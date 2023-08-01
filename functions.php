@@ -40,5 +40,8 @@ add_action('after_setup_theme', 'clarusmod_setup');
 // BASIC FUNCTIONS.
 require get_template_directory() . '/inc/functions/basic-functions.php';
 
+// Enqueue Styles and Scripts.
+require get_template_directory() . '/inc/functions/enqueues.php';
+
 // Load Customizer
 include_once get_template_directory() . '/inc/customizer/customizer.php';

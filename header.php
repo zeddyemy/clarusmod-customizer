@@ -22,16 +22,4 @@
     </head>
     
     <body <?php body_class(''); ?>>
-        <header id="header">
-            <div class="header-c">
-                <div class="logo">
-                    <a href="<?php echo get_bloginfo('wpurl'); ?>">
-                        <h1>
-                            <span>M</span>er<span>id</span>ian
-                        </h1>
-                    </a>
-                </div>
-                <span class="menuBtn"> <i class='bx bx-menu'></i> </span>
-                <nav class=" nav nav-links"></nav>
-            </div>
-        </header>
+        

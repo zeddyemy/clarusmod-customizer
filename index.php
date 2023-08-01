@@ -16,8 +16,10 @@
 
 get_header(); ?>
 
-<section style="min-height: 100vh; display:flex; justify-content:center; align-items:center; color:antiquewhite; background-color:black">
+<section class="wrapper">
     <h1>CLARUSMOD</h1>
+    <?php echo author_url('https://zeddyemy.github.io', 'Zeddy Emmanuel'); ?>
+    <p> <?php echo clarusmod_copyright() ?> </p>
 </section>
 
 <?php get_footer(); ?>
