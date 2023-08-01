@@ -7,7 +7,7 @@ ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with 
 ## Features
 
 - New Overhaul Design Interface of the Customizer Section
-- Custom Panel Section that allows Child Panels
+- Custom Panel Section that allows Nesting Child Panels
 - Custom Control
     - Toggle Switch Custom Control
     - TinyMce Custom Control
@@ -32,7 +32,7 @@ ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with 
 
 ### Customization
 
-- Clarusmod comes with built in custom controls, and with it, you can change the style or functionality of your wordpress theme and see the changes in real time.
+Clarusmod comes with built in custom controls, and with it, you can change the style or functionality of your wordpress theme and see the changes in real time.
 - So far, here are the custom controls I have added:
     - Toggle Switch Custom Control - Creates a toggle Switch you can use to disable or enable settings.
     - TinyMce Custom Control - Creates a rich Text Editor using the TinyMCE Textarea.
@@ -43,7 +43,7 @@ ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with 
 
 ## Built With
 
-- At the Moment, this theme uses only the Boxicons library to display icons the site. There is also a custom control that utilizes the library to allow users select from the list of available Icons.
+- At the Moment, this theme uses only the Boxicons library to display icons the site. There is also a [custom control that utilizes the library](https://github.com/zeddyemy/clarusmod-customizer/blob/main/inc/customizer/customizer-extensions/custom-controls/class-boxicon-select-custom-control.php#L14) to allow users select from the list of available Icons.
 
 ## Contributing
 
@@ -68,3 +68,5 @@ This project is licensed under the [GNU License](LICENSE).
 ## Acknowledgments
 
 This project was inspired by the work of many talented developers. While I was unable to find the original source of the CSS file that helped me change the default look of the WordPress Customizer side panel, I would like to extend my gratitude to all those who have contributed to the WordPress community and shared their knowledge and expertise. Your work has been a great source of inspiration for me and has helped me create this project. Thank you!
+
+Additionally, I took inspiration from the work of OriginalEXE on GitHub for extending panels and sections to allow nesting. Their Gist provided valuable insights that helped in developing the custom panel section of this theme. You can find the Gist [here](https://gist.github.com/OriginalEXE/9a6183e09f4cae2f30b006232bb154af).
