@@ -30,6 +30,9 @@ if (class_exists('WP_Customize_Control')) {
     // Select Boxicon custom control class
     require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-boxicon-select-custom-control.php';
 
+    // Searchable Select custom control class
+    require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-searchable-select-custom-control.php';
+
 
     // CUSTOM SANITIZE CALLBACKS
     //require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';

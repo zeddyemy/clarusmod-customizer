@@ -12,7 +12,16 @@
 	--color5: #cbcbcbab;
 	--outline: #8585857d;
 	--round-conners: 7px;
+	--input-height: 30px;
+	--input-font-size: 14px;
 	--box-background: rgba(248, 248, 248, 0.7);
+}
+
+@media screen and (max-width: 782px) {
+	:root {
+		--input-height: 40px;
+		--input-font-size: 16px;
+	}
 }
 
 body {
@@ -338,67 +347,69 @@ body.adding-widget .add-new-widget:hover {
 	box-shadow: none;
 }
 
-input[type="text"],
-input[type="search"],
-input[type="radio"],
-input[type="tel"],
-input[type="time"],
-input[type="url"],
-input[type="week"],
-input[type="password"],
-input[type="checkbox"],
-input[type="color"],
-input[type="date"],
-input[type="datetime"],
-input[type="datetime-local"],
-input[type="email"],
-input[type="month"],
-input[type="number"],
-select,
-textarea {
+.wp-customizer input[type="text"],
+.wp-customizer input[type="search"],
+.wp-customizer input[type="radio"],
+.wp-customizer input[type="tel"],
+.wp-customizer input[type="time"],
+.wp-customizer input[type="url"],
+.wp-customizer input[type="week"],
+.wp-customizer input[type="password"],
+.wp-customizer input[type="checkbox"],
+.wp-customizer input[type="color"],
+.wp-customizer input[type="date"],
+.wp-customizer input[type="datetime"],
+.wp-customizer input[type="datetime-local"],
+.wp-customizer input[type="email"],
+.wp-customizer input[type="month"],
+.wp-customizer input[type="number"],
+.wp-customizer select,
+.wp-customizer textarea {
 	border-radius: var(--round-conners) !important;
 	border: 1px solid var(--color2) !important;
 	-webkit-box-shadow: none;
 	box-shadow: none;
 	background-color: var(--color1) !important;
 	color: var(--color3) !important;
+	min-height: var(--input-height) !important;
+	font-size: var(--input-font-size) !important;
 }
-input[type="text"]:focus,
-input[type="search"]:focus,
-input[type="radio"]:focus,
-input[type="tel"]:focus,
-input[type="time"]:focus,
-input[type="url"]:focus,
-input[type="week"]:focus,
-input[type="password"]:focus,
-input[type="color"]:focus,
-input[type="date"]:focus,
-input[type="datetime"]:focus,
-input[type="datetime-local"]:focus,
-input[type="email"]:focus,
-input[type="month"]:focus,
-input[type="number"]:focus,
-select:focus,
-textarea:focus {
+.wp-customizer input[type="text"]:focus,
+.wp-customizer input[type="search"]:focus,
+.wp-customizer input[type="radio"]:focus,
+.wp-customizer input[type="tel"]:focus,
+.wp-customizer input[type="time"]:focus,
+.wp-customizer input[type="url"]:focus,
+.wp-customizer input[type="week"]:focus,
+.wp-customizer input[type="password"]:focus,
+.wp-customizer input[type="color"]:focus,
+.wp-customizer input[type="date"]:focus,
+.wp-customizer input[type="datetime"]:focus,
+.wp-customizer input[type="datetime-local"]:focus,
+.wp-customizer input[type="email"]:focus,
+.wp-customizer input[type="month"]:focus,
+.wp-customizer input[type="number"]:focus,
+.wp-customizer select:focus,
+.wp-customizer textarea:focus {
 	box-shadow: 0 0 0 1px var(--color2) !important;
 	border: 2px solid var(--color2) !important;
 	background-color: var(--color1) !important;
 	color: white !important;
 }
-input[type="checkbox"] {
+.wp-customizer input[type="checkbox"] {
 	border-radius: 4px;
 }
-select::-webkit-scrollbar,
-textarea::-webkit-scrollbar {
+.wp-customizer select::-webkit-scrollbar,
+.wp-customizer textarea::-webkit-scrollbar {
     width: 5px;
 }
-select::-webkit-scrollbar-track,
-textarea::-webkit-scrollbar-track {
+.wp-customizer select::-webkit-scrollbar-track,
+.wp-customizer textarea::-webkit-scrollbar-track {
     box-shadow: inset 0 0 3px grey;
     background-color: var(--box-background);
 }
-select::-webkit-scrollbar-thumb,
-textarea::-webkit-scrollbar-thumb {
+.wp-customizer select::-webkit-scrollbar-thumb,
+.wp-customizer textarea::-webkit-scrollbar-thumb {
     background: var(--color2);
     border-radius: 4px;
 }

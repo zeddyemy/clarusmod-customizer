@@ -127,3 +127,35 @@ $wp_customize->add_control(new Clarusmod_Boxicon_Select_Custom_Control(
         'settings'   => 'select_boxicon_control',
     )
 ));
+
+
+// Select Boxicon Custom Control
+$wp_customize->add_setting(
+    'searchable_select_control',
+    array(
+        'default' => '',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'sanitize_text_field',
+    )
+);
+
+$wp_customize->add_control(new Searchable_Select_Custom_Control(
+    $wp_customize,
+    'searchable_select_control',
+    array(
+        'label'         => esc_html__('Searchable Select Option', 'clarusmod'),
+        'description'   => esc_html__('This select field allows users to search through the options by typing in the input field', 'clarusmod'),
+        'section'       => 'custom_controls_section_id',
+        'settings'      => 'searchable_select_control',
+        'input_attrs' => array(
+            'placeholder' => esc_html__('&mdash; Select &mdash;', 'clarusmod'),
+            'multiselect' => false,
+        ),
+        'choices'       => array(
+            'option1' => 'Option 1',
+            'option2' => 'Option 2',
+            'option3' => 'Option 3',
+            // Add more options ass needed
+        ),
+    )
+));

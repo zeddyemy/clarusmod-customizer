@@ -50,4 +50,22 @@ jQuery(document).ready(function ($) {
         $('.customize-control-url p.input-msg').toggleClass('invalid-url', !isValid);
         $(this).toggleClass('invalid-url', !isValid);
     });
+
+    /**
+     * Searchable Select Control
+     * 
+     * @author Zeddy Emmanuel <https://zeddyemy.github.io/>
+     * @license http://www.gnu.org/licenses/gpl-2.0.html
+     */
+    
+    $('.customize-ctrl-searchable-select').each(function(){
+		$('.custom-searchable-select').select2({
+			allowClear: true
+		});
+	});
+
+	$(".custom-searchable-select").on("change", function() {
+		var select2Val = $(this).val();
+		$(this).parent().find('.customize-ctrl-searchable-select').val(select2Val).trigger('change');
+	});
 });
