@@ -396,8 +396,12 @@ body.adding-widget .add-new-widget:hover {
 	background-color: var(--color1) !important;
 	color: white !important;
 }
+.wp-customizer input[type="radio"],
 .wp-customizer input[type="checkbox"] {
 	border-radius: 4px;
+    width: 1.5625rem !important;
+	height: 1.5625rem !important;
+	min-height: 1.5625rem !important;
 }
 .wp-customizer select::-webkit-scrollbar,
 .wp-customizer textarea::-webkit-scrollbar {
