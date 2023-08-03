@@ -42,18 +42,18 @@ ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with 
 
 Clarusmod comes with built in custom controls, and with it, you can change the style or functionality of your wordpress theme and see the changes in real time.
 - So far, here are the custom controls I have added:
-    - Toggle Switch Custom Control - Creates a toggle Switch you can use to disable or enable settings.
-    - TinyMce Custom Control - Creates a rich Text Editor using the TinyMCE Textarea.
-    - URL Custom Control - Creates an input field specifically for URLs.
-    - Plain Text Custom Control - It just displays a plain text in the customizer and doesn't do anything. Can be used to give more information.
-    - Select Boxicons Custom Control - Creates a dropdown of icons allowing users to select an icon of their choice.
-    - Select Category Custom Control - Creates a dropdown of all the categories present on the wordpress site.
-    - Searchable Select Custom Control - Creates a dropdown of options and has search functionality.
+    - **Toggle Switch Custom Control:-** Creates a toggle Switch you can use to disable or enable settings.
+    - **TinyMce Custom Control:-** Creates a rich Text Editor using the TinyMCE Textarea.
+    - **URL Custom Control:-** Creates an input field specifically for URLs.
+    - **Plain Text Custom Control:-** It just displays a plain text in the customizer and doesn't do anything. Can be used to give more information.
+    - **Select Boxicons Custom Control:-** Creates a dropdown of icons allowing users to select an icon of their choice.
+    - **Select Category Custom Control:-** Creates a dropdown of all the categories present on the wordpress site.
+    - **Searchable Select Custom Control:-** Creates a dropdown of options and has search functionality.
 
 ## Built With
 
-- Boxicons library: This theme uses only the Boxicons library to display icons the site. There is also a [custom control that utilizes the library](https://github.com/zeddyemy/clarusmod-customizer/blob/main/inc/customizer/customizer-extensions/custom-controls/class-boxicon-select-custom-control.php#L14) to allow users select from the list of available Icons.
-- Select2 Library: The Select2 Library is used to for the Searchable Select Custom Control. It's what enables the search functionality for a select field.
+- **Boxicons library:** This theme uses only the Boxicons library to display icons the site. There is also a [custom control that utilizes the library](https://github.com/zeddyemy/clarusmod-customizer/blob/main/inc/customizer/customizer-extensions/custom-controls/class-boxicon-select-custom-control.php#L14) to allow users select from the list of available Icons.
+- **Select2 Library:** The Select2 Library is used to for the Searchable Select Custom Control. It's what enables the search functionality for a select field.
 
 ## Contributing
 
