@@ -1,9 +1,9 @@
 # ClarusMod Customizer
 
-**Author:** Emmanuel Zeddy
-**Author URI:** https://zeddyemy.github.io
+**Author:** Emmanuel Zeddy  
+**Author URI:** https://zeddyemy.github.io  
 **License:** GNU General Public License v3 or later  
-**License URI:** https://www.gnu.org/licenses/gpl-3.0.html
+**License URI:** https://www.gnu.org/licenses/gpl-3.0.html  
 **Version:** 1.0.0
 
 ## Description ##
