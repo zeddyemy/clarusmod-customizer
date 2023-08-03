@@ -1,5 +1,12 @@
 # ClarusMod Customizer
 
+**Author:** Emmanuel Zeddy
+**Author URI:** https://zeddyemy.github.io
+**License:** GNU General Public License v3 or later  
+**License URI:** https://www.gnu.org/licenses/gpl-3.0.html
+**Version:** 1.0.0
+
+## Description ##
 ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with extended customization options for users.
 
 ![ClarusMod Customizer Screenshot](screenshot.png)
@@ -15,6 +22,7 @@ ClarusMod Customizer is a custom WordPress theme built on top of ClarusMod with 
     - Plain Text Custom Control
     - Select Boxicons Custom Control
     - Select Category Custom Control
+    - Searchable Select Custom Control
 
 ## Getting Started
 
@@ -40,10 +48,12 @@ Clarusmod comes with built in custom controls, and with it, you can change the s
     - Plain Text Custom Control - It just displays a plain text in the customizer and doesn't do anything. Can be used to give more information.
     - Select Boxicons Custom Control - Creates a dropdown of icons allowing users to select an icon of their choice.
     - Select Category Custom Control - Creates a dropdown of all the categories present on the wordpress site.
+    - Searchable Select Custom Control - Creates a dropdown of options and has search functionality.
 
 ## Built With
 
-- At the Moment, this theme uses only the Boxicons library to display icons the site. There is also a [custom control that utilizes the library](https://github.com/zeddyemy/clarusmod-customizer/blob/main/inc/customizer/customizer-extensions/custom-controls/class-boxicon-select-custom-control.php#L14) to allow users select from the list of available Icons.
+- Boxicons library: This theme uses only the Boxicons library to display icons the site. There is also a [custom control that utilizes the library](https://github.com/zeddyemy/clarusmod-customizer/blob/main/inc/customizer/customizer-extensions/custom-controls/class-boxicon-select-custom-control.php#L14) to allow users select from the list of available Icons.
+- Select2 Library: The Select2 Library is used to for the Searchable Select Custom Control. It's what enables the search functionality for a select field.
 
 ## Contributing
 
