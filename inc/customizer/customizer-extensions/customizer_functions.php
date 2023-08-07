@@ -1,11 +1,17 @@
 <?php
 
 // Set the Customizer default values
-if (!function_exists('clarusmod_get_default_vals')) :
-    function clarusmod_get_default_vals() {
+if (!function_exists('clarusmod_customizer_default_vals')) :
+    function clarusmod_customizer_default_vals() {
         $default_vals = array(
-            'social_newtab' => 0,
-            'social_urls' => '',
+            'toggle_switch'                 => 'true',
+            'url_control'                   => 'myUrl.com',
+            'raw_text_control'              => '',
+            'tinymce_control'               => 'You can use this editor to add more rich text to your theme',
+            'select_category_control'       => 0,
+            'select_boxicon_control'        => 'none',
+            'searchable_select_control'     => '',
+            'btn_style_control'             => 'normal',
         );
 
         return apply_filters('clarusmod_customizer_default_vals', $default_vals);

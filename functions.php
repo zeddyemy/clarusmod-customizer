@@ -18,11 +18,17 @@ if (!function_exists('clarusmod_setup')) :
     
     function clarusmod_setup() {
 
+        // use a find and replace to change 'clarusmod' to the name of your theme in all the template files.
+        load_theme_textdomain('clarusmod');
+
         // Add default posts and comments RSS feed links to head.
         add_theme_support('automatic-feed-links');
 
         // post formats
-        add_theme_support('post-formats', array('aside', 'quote'));
+        add_theme_support('post-formats', array('aside', 'image', 'link', 'quote', 'status'));
+
+        // use wp_nav_menu() in one location.
+        register_nav_menu('primary', __('Primary Menu', 'clarusmod'));
 
         // HTML5
         add_theme_support('html5');
@@ -32,12 +38,18 @@ if (!function_exists('clarusmod_setup')) :
 
         // Enable support for Post Thumbnails on posts and pages.
         add_theme_support('post-thumbnails', array('post', 'page', 'events', 'gallery'));
+
+        // Enable supports custom background color and image,
+        add_theme_support( 'custom-background', array( 'default-color' => 'f2f2f2'));
+
+        // Enable widget sidebars to use selective refresh in the Customizer.
+        add_theme_support('customize-selective-refresh-widgets');
     }
 endif;
 add_action('after_setup_theme', 'clarusmod_setup');
 
 
-// BASIC FUNCTIONS.
+// Basic Functions.
 require get_template_directory() . '/inc/functions/basic-functions.php';
 
 // Enqueue Styles and Scripts.

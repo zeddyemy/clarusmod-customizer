@@ -8,8 +8,13 @@
  */
 
 class initialize_clarusmod_customizer_settings {
-    
+
+    private $defaults;
+
     public function __construct() {
+        // Get our Customizer defaults
+		$this->defaults = clarusmod_customizer_default_vals();
+
         add_action('customize_register', array($this, 'clarusmod_register_customizer'));
     }
     

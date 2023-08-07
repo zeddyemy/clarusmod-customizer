@@ -4,7 +4,7 @@
 $wp_customize->add_setting(
     'toggle_switch',
     array(
-        'default' => 'true',
+        'default' => $this->defaults['toggle_switch'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'clarusmod_toggle_switch_sanitization'
     )
@@ -26,7 +26,7 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'url_control',
     array(
-        'default' => 'myUrl.com',
+        'default' => $this->defaults['url_control'],
         'transport' => 'postMessage',
 		'sanitize_callback' => 'clarusmod_url_sanitization',
     )
@@ -47,7 +47,7 @@ $wp_customize->add_control(new Clarusmod_Url_Custom_Control(
 $wp_customize->add_setting(
     'raw_text_control',
     array(
-        'default' => '',
+        'default' => $this->defaults['raw_text_control'],
         'transport' => 'postMessage',
         'sanitize_callback' => 'clarusmod_text_sanitization'
     )
@@ -68,8 +68,8 @@ $wp_customize->add_control(new Clarusmod_Raw_Text_Custom_Control(
 $wp_customize->add_setting(
     'tinymce_control',
     array(
+        'default' => $this->defaults['tinymce_control'],
         'capability' => 'edit_theme_options',
-        'default' => 'You can use this editor to add more rich text to your theme',
         'sanitize_callback' => 'wp_kses_post',
         'type'       => 'theme_mod',
     )
@@ -94,7 +94,7 @@ $wp_customize->add_control(new Clarusmod_TinyMCE_Custom_control(
 $wp_customize->add_setting(
     'select_category_control',
     array(
-        'default' => '0',
+        'default' => $this->defaults['select_category_control'],
         'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     )
@@ -115,7 +115,7 @@ $wp_customize->add_control(new Clarusmod_Category_Select_Custom_Control(
 $wp_customize->add_setting(
     'select_boxicon_control',
     array(
-        'default' => 'none',
+        'default' => $this->defaults['select_boxicon_control'],
         'transport' => 'refresh',
         'sanitize_callback' => 'clarusmod_text_sanitization'
     )
@@ -136,7 +136,7 @@ $wp_customize->add_control(new Clarusmod_Boxicon_Select_Custom_Control(
 $wp_customize->add_setting(
     'searchable_select_control',
     array(
-        'default' => '',
+        'default' => $this->defaults['searchable_select_control'],
         'transport' => 'refresh',
         'sanitize_callback' => 'clarusmod_text_sanitization'
     )
@@ -167,7 +167,7 @@ $wp_customize->add_control(new Searchable_Select_Custom_Control(
 $wp_customize->add_setting(
     'btn_style_control',
     array(
-        'default' => 'normal',
+        'default' => $this->defaults['btn_style_control'],
         'transport' => 'refresh',
         'sanitize_callback' => 'clarusmod_radio_sanitization'
     )
