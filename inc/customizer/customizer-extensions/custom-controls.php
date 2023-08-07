@@ -33,6 +33,9 @@ if (class_exists('WP_Customize_Control')) {
     // Searchable Select custom control class
     require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-searchable-select-custom-control.php';
 
+    // Button Style custom control class
+    require_once trailingslashit(dirname(__FILE__)) . 'custom-controls/class-btn-style-custom-control.php';
+
 
     // CUSTOM SANITIZE CALLBACKS
     //require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';

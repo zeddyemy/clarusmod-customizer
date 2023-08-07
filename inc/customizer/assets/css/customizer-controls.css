@@ -16,6 +16,7 @@
 }
 .wp-customizer .select2.select2-container {
 	margin: 7px 0px 0px;
+	width: 100% !important;
 }
 .wp-customizer .select2-container--default .selection .select2-selection--multiple, 
 .wp-customizer .select2-container--default .selection .select2-selection--single {
@@ -972,4 +973,63 @@ URL Custom Control / Input prefix
 .invalid-url {
 	display: block !important;
 	color:red !important;
+}
+
+/*============================
+Button Style Custom Control
+=============================*/
+.btn_type_control .radio-button-label>input {
+	display: none;
+}
+.btn-style-options {
+	display: grid;
+	gap: 10px;
+    grid-template-columns: repeat(2,1fr);
+	margin-top: 10px;
+}
+.btn-style-option {
+	display: block;
+	cursor: pointer;
+	font-size: 0.9em;
+	padding: 6px 10px;
+	text-align: center;
+	background-color: var(--color1);
+	outline: 2px solid var(--outline);
+	transition: ease-in-out all .4s;
+	position: relative;
+}
+.btn-style-option::before {
+	content: '';
+    top: 0;
+    left: 0;
+    z-index: 10;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+}
+.btn-style-option.rounded,
+[class*="-rounded"] {
+	border-radius: var(--round-conners);
+}
+.btn-style-option.pill,
+[class*="-pill"] {
+	border-radius: 10em;
+}
+
+
+btn-style-option:hover::before {
+	z-index: 20;
+	background: #00000057;
+}
+.radio-button-label>input:checked+.btn-style-option {
+	background-color: var(--color2);
+	outline: 3px solid var(--color2);
+}
+
+
+[class*="ghost-"] {
+	background-color: transparent !important;
+}
+.btn-style-label {
+	margin-left: 5px;
 }

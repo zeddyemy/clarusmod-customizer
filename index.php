@@ -19,6 +19,7 @@ $tinymce_control = get_theme_mod('tinymce_control', 'Clarusmod is theme used to 
 $select_category_control = get_theme_mod('select_category_control', '0');
 $select_boxicon_control = get_theme_mod('select_boxicon_control', 'none');
 $searchable_select_control = get_theme_mod('searchable_select_control', '');
+$btn_style_control = get_theme_mod('btn_style_control');
 
 get_header(); ?>
 
@@ -99,6 +100,16 @@ get_header(); ?>
                 <?php else : ?>
                     <?php echo $searchable_select_control; ?>
                 <?php endif; ?>
+            </div>
+        </div>
+    </div>
+
+    <div class="card control-reflect" id="btn-style-control">
+        <label>Button Style Custom Control</label>
+        <div class="control">
+            <p>The Style of button that is chosen Will be reflect here</p>
+            <div class="control-box">
+                <span class="btn <?php echo esc_attr($btn_style_control); ?>">Button</span>
             </div>
         </div>
     </div>

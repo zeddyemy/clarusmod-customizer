@@ -95,7 +95,6 @@ $wp_customize->add_setting(
         'sanitize_callback' => 'absint',
     )
 );
-
 $wp_customize->add_control(new Clarusmod_Category_Select_Custom_Control(
     $wp_customize,
     'select_category_control',
@@ -116,7 +115,6 @@ $wp_customize->add_setting(
         'sanitize_callback' => 'sanitize_text_field',
     )
 );
-
 $wp_customize->add_control(new Clarusmod_Boxicon_Select_Custom_Control(
     $wp_customize,
     'select_boxicon_control',
@@ -138,7 +136,6 @@ $wp_customize->add_setting(
         'sanitize_callback' => 'sanitize_text_field',
     )
 );
-
 $wp_customize->add_control(new Searchable_Select_Custom_Control(
     $wp_customize,
     'searchable_select_control',
@@ -159,3 +156,37 @@ $wp_customize->add_control(new Searchable_Select_Custom_Control(
         ),
     )
 ));
+
+
+// Button Style Custom Control
+$wp_customize->add_setting(
+    'btn_style_control',
+    array(
+        'default' => 'normal',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'clarusmod_radio_sanitization'
+    )
+);
+$wp_customize->add_control(new Btn_Style_Custom_Control(
+    $wp_customize,
+    'btn_style_control',
+    array(
+        'label'         => esc_html__('Button Style Option', 'clarusmod'),
+        'description'   => esc_html__('This allows users to choose what button style they would like for their site', 'clarusmod'),
+        'section'       => 'custom_controls_section_id',
+        'settings'      => 'btn_style_control',
+    )
+));
+if (!function_exists('clarusmod_radio_sanitization')) {
+    function clarusmod_radio_sanitization($input, $setting)
+    {
+        //get the list of possible radio box or select options
+        $choices = $setting->manager->get_control($setting->id)->choices;
+
+        if (array_key_exists($input, $choices)) {
+            return $input;
+        } else {
+            return $setting->default;
+        }
+    }
+}
