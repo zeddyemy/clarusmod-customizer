@@ -177,16 +177,3 @@ $wp_customize->add_control(new Btn_Style_Custom_Control(
         'settings'      => 'btn_style_control',
     )
 ));
-if (!function_exists('clarusmod_radio_sanitization')) {
-    function clarusmod_radio_sanitization($input, $setting)
-    {
-        //get the list of possible radio box or select options
-        $choices = $setting->manager->get_control($setting->id)->choices;
-
-        if (array_key_exists($input, $choices)) {
-            return $input;
-        } else {
-            return $setting->default;
-        }
-    }
-}

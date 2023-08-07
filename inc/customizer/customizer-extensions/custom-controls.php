@@ -38,6 +38,5 @@ if (class_exists('WP_Customize_Control')) {
 
 
     // CUSTOM SANITIZE CALLBACKS
-    //require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';
-    /********************************** END *********************************/
+    require_once trailingslashit(dirname(__FILE__)) . 'custom-sanitize-callbacks.php';
 }
