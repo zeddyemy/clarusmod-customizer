@@ -5,6 +5,8 @@ $wp_customize->add_setting(
     'toggle_switch',
     array(
         'default' => 'true',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'clarusmod_toggle_switch_sanitization'
     )
 );
 $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
@@ -24,10 +26,9 @@ $wp_customize->add_control(new Clarusmod_Toggle_Switch_Custom_control(
 $wp_customize->add_setting(
     'url_control',
     array(
-        'capability' => 'edit_theme_options',
         'default' => 'myUrl.com',
-        'sanitize_callback' => 'sanitize_textarea_field',
-        'type' => 'theme_mod',
+        'transport' => 'postMessage',
+		'sanitize_callback' => 'clarusmod_url_sanitization',
     )
 );
 $wp_customize->add_control(new Clarusmod_Url_Custom_Control(
@@ -47,6 +48,8 @@ $wp_customize->add_setting(
     'raw_text_control',
     array(
         'default' => '',
+        'transport' => 'postMessage',
+        'sanitize_callback' => 'clarusmod_text_sanitization'
     )
 );
 $wp_customize->add_control(new Clarusmod_Raw_Text_Custom_Control(
@@ -92,6 +95,7 @@ $wp_customize->add_setting(
     'select_category_control',
     array(
         'default' => '0',
+        'transport' => 'refresh',
         'sanitize_callback' => 'absint',
     )
 );
@@ -112,7 +116,8 @@ $wp_customize->add_setting(
     'select_boxicon_control',
     array(
         'default' => 'none',
-        'sanitize_callback' => 'sanitize_text_field',
+        'transport' => 'refresh',
+        'sanitize_callback' => 'clarusmod_text_sanitization'
     )
 );
 $wp_customize->add_control(new Clarusmod_Boxicon_Select_Custom_Control(
@@ -127,13 +132,13 @@ $wp_customize->add_control(new Clarusmod_Boxicon_Select_Custom_Control(
 ));
 
 
-// Select Boxicon Custom Control
+// Searchable Select Custom Control
 $wp_customize->add_setting(
     'searchable_select_control',
     array(
         'default' => '',
         'transport' => 'refresh',
-        'sanitize_callback' => 'sanitize_text_field',
+        'sanitize_callback' => 'clarusmod_text_sanitization'
     )
 );
 $wp_customize->add_control(new Searchable_Select_Custom_Control(
